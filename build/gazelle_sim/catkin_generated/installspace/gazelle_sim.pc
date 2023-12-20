@@ -1,0 +1,8 @@
+prefix=/home/lo/igvc_ws/install
+
+Name: gazelle_sim
+Description: Description of gazelle_sim
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lgazelle_sim
+Requires: cv_bridge dynamic_reconfigure geometry_msgs image_transport roscpp sensor_msgs std_msgs tf

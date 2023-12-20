@@ -1,0 +1,11 @@
+Symlinking /home/lo/igvc_ws/devel/share/gazelle_sim/docs/GazelleSimConfig.dox
+Symlinking /home/lo/igvc_ws/devel/share/gazelle_sim/docs/GazelleSimConfig-usage.dox
+Symlinking /home/lo/igvc_ws/devel/share/gazelle_sim/docs/GazelleSimConfig.wikidoc
+Symlinking /home/lo/igvc_ws/devel/share/gazelle_sim/cmake/gazelle_simConfig.cmake
+Symlinking /home/lo/igvc_ws/devel/share/gazelle_sim/cmake/gazelle_simConfig-version.cmake
+Symlinking /home/lo/igvc_ws/devel/include/gazelle_sim/GazelleSimConfig.h
+Symlinking /home/lo/igvc_ws/devel/lib/gazelle_sim/gazelle_sim_node
+Symlinking /home/lo/igvc_ws/devel/lib/python3/dist-packages/gazelle_sim/__init__.py
+Symlinking /home/lo/igvc_ws/devel/lib/python3/dist-packages/gazelle_sim/cfg/GazelleSimConfig.py
+Symlinking /home/lo/igvc_ws/devel/lib/python3/dist-packages/gazelle_sim/cfg/__init__.py
+Symlinking /home/lo/igvc_ws/devel/lib/pkgconfig/gazelle_sim.pc

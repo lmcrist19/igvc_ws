@@ -1,0 +1,8 @@
+prefix=/home/lo/igvc_ws/install
+
+Name: gazelle_sim_j129_l2_course
+Description: Description of gazelle_sim_j129_l2_course
+Version: 0.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
