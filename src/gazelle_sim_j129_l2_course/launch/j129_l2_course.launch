@@ -1,0 +1,28 @@
+<launch>
+
+  <!-- Gazelle Sim Arguments -->
+  <arg name="show_rviz" default="false" />
+  <arg name="show_steering" default="false" />
+  <arg name="rviz_config" default="$(find gazelle_sim)/rviz/gazelle_sim.rviz" />
+  <arg name="show_image_view" default="false" />
+  <arg name="show_dynamic_reconfigure" default="true" />
+  
+  <!-- Load map -->
+  <param name="map_dir" value="$(find gazelle_sim_j129_l2_course)/map" />
+  <rosparam command="load"
+            file="$(find gazelle_sim_j129_l2_course)/map/j129_l2_course.yaml" />
+
+  <!-- Load robot -->
+  <rosparam command="load"
+            file="$(find gazelle_sim)/robot/basic_differential_circ.yaml" />
+
+  <!-- Launch Gazelle Sim -->
+  <include file="$(find gazelle_sim)/launch/gazelle_sim.launch">
+    <arg name="show_rviz" value="$(arg show_rviz)" />
+    <arg name="rviz_config" default="$(find gazelle_sim)/rviz/gazelle_sim.rviz" />
+    <arg name="show_steering" value="$(arg show_steering)" />
+    <arg name="show_image_view" value="$(arg show_image_view)" />
+    <arg name="show_dynamic_reconfigure" value="$(arg show_dynamic_reconfigure)" />
+  </include>
+    
+</launch>

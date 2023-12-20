@@ -1,0 +1,8 @@
+prefix=/home/lo/igvc_ws/devel/.private/lane_follow_igvc
+
+Name: lane_follow_igvc
+Description: Description of lane_follow_igvc
+Version: 0.0.0
+Cflags: -I/home/lo/igvc_ws/devel/.private/lane_follow_igvc/include
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,15 @@
+# Field image location
+field_image_file: 'J129.png'
+
+# Image file scaling and center
+x_scale: 500.0
+y_scale: 500.0
+x_center_img: 1757.3
+y_center_img: 3548
+img_view_scale: 0.125
+
+# Default robot start location
+Xr_init: 2.25
+Yr_init: -3.5
+Theta_init: 90.0
+

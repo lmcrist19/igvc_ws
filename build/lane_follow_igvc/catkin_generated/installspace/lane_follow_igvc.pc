@@ -1,0 +1,8 @@
+prefix=/home/lo/igvc_ws/install
+
+Name: lane_follow_igvc
+Description: Description of lane_follow_igvc
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 
