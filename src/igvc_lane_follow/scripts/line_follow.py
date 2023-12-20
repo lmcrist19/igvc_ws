@@ -55,25 +55,16 @@ class LineFollowNode():
         # Initialize robot motion
         self.steer = 0.0
 
-        # Define the image subscriber (Cam), comment out if using USB cam
-        #self.image_view = rospy.Subscriber('usb_cam/image_raw', Image,
-                                          #self.camera_callback, queue_size=1)
-
-        # Define the image subscriber (Sim), comment out if using Gazelle Sim
+        # Define the image subscriber
         self.image_view = rospy.Subscriber('usb_cam/image_raw', Image,
                                           self.camera_callback, queue_size=1)
+        # Define python publisher
+        self.pub_serial = rospy.Publisher('comms/python', 
+                                           Float32MultiArray, queue_size=1)
         # Define cmd publisher
         self.pub_twist = rospy.Publisher('cmd_vel',
-                                         Twist, queue_size=1)
-        # Define arduino listener
-        self.sub_arduino = rospy.Subscriber('comms/arduino', Float32MultiArray,
-                                         self.arduino_callback, queue_size=1)
-        #self.sub_arduino = rospy.Subscriber('comms/arduino', Float32,
-                                         #self.arduino_callback, queue_size=1)
-        # Define python talker
-        self.pub_arduino = rospy.Publisher('comms/python', Float32MultiArray, queue_size=1)
-                                                    
-        # Set up dynamics reconfigure
+                                         Twist, queue_size=1)                                            
+        # Set up dynamic reconfigure
         self.srv = Server(LineFollowDynCfgConfig,
                           self.dyn_reconfig_callback)
         # Define ROS rate
@@ -87,12 +78,10 @@ class LineFollowNode():
                 twist_msg.angular.z = self.steer
             else:
                 twist_msg = Twist()
-            rotations = self.test_length/(2*np.pi*self.wheel_radius)
-            self.max_rpm = (60*(rotations/self.test_time))
-            self.rpm2analog = 255/self.max_rpm
-            self.dimension_arr.data = [self.track_width, self.wheel_radius,
-                                          self.max_rpm, self.rpm2analog] # assign the array with the value you want to send
-            self.pub_arduino.publish(self.dimension_arr)
+
+            self.dimension_arr.data = [self.test_length, self.test_time, 
+                                       self.track_width, self.wheel_radius]
+            self.pub_serial.publish(self.dimension_arr)
             self.pub_twist.publish(twist_msg)
             
             # Sleep for time step
@@ -114,10 +103,14 @@ class LineFollowNode():
         self.sat_high = config['sat_high']
         self.val_low = config['val_low']
         self.val_high = config['val_high']
+
+        # Add configurations for image
         self.contour_area = config['cont_area']
         self.mask_top = config['mask_top']
         self.mask_right = config['mask_right']
         self.targ_line = config['targ_line']
+
+        # Add calibration values
         self.test_length = config['test_length']
         self.test_time = config['test_time']
         self.track_width = config['track_width']
@@ -145,7 +138,6 @@ class LineFollowNode():
         img_masked = cv.bitwise_and(img_masked,mask_top)
         img_masked = cv.bitwise_and(img_masked,mask_right)
         
-
         # Convert image to a HSV image and blur
         img_gray = cv.cvtColor(img_masked, cv.COLOR_BGR2GRAY)
         img_gray = cv.cvtColor(img_gray, cv.COLOR_GRAY2BGR)
@@ -200,13 +192,6 @@ class LineFollowNode():
         self.display_image('HSV Image Threshold', img_hsv_thresh, True)
         self.display_image('Centroid', img, True)
         return
-    
-    ########################
-    # Arduino Comms Callback
-    ########################
-    def arduino_callback(self, data):
-    # Access the data array inside Float32MultiArray
-        dimension_data = data.data
 
     ####################
     # Display an image

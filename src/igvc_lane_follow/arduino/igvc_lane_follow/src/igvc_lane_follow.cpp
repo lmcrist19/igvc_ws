@@ -4,98 +4,91 @@
 #include <std_msgs/Float32MultiArray.h>
 #include <Servo.h>
 
-//=================
-// L298 connections
-//=================
-// Left motor
-#define input_1 2
-#define input_2 3
-#define ena  9
-// Right motor
-#define input_3  4
-#define input_4  5
-#define enb  10
+#define in1_l 2
+#define in2_l 3
+#define ena_l 9
+#define in3_r  4
+#define in4_r  5
+#define enb_r  10
 
-//========================
-// Ros object declarations
-//========================
+float test_length;
+float test_time;
+float track_width;
+float wheel_radius;
+float rpm_to_analog;
+
+float vel_ang;
+float vel_lin;
+
+float rpm_l;
+float rpm_r;
+
+float pi = 3.14159265358;
+
 ros::NodeHandle  nh;
-geometry_msgs::Twist msg_1;
-std_msgs::Float32MultiArray msg_2, msg_3;
+geometry_msgs::Twist msg_vel;
+std_msgs::Float32MultiArray msg_config;
 
-//===================================================
-// Initialize dimension variables of differential bot
-//===================================================
-float track_width; // Distance between wheels in meters
-float wheel_radius; // Radius of wheels in meters
-float max_rpm; // Calculated max RPM of motors
-float rpm_to_analog; // Maps rpm values from 0-255 
-float steer; // Angular velocity in rad/s
-float speed; // Speed in m/s
-float rpm_left; // RPM of left motor
-float rpm_right; // RPM of right motor
+//////////////////////
+// Velocity callback
+//////////////////////
+void cmdVelMsg( const geometry_msgs::Twist& msg_vel){
+  vel_ang = msg_vel.angular.z;
+  vel_lin = msg_vel.linear.x;
 
-//=========================================================
-// Callback function in the event a ROS message is received
-//=========================================================
-void cmdVelMsg( const geometry_msgs::Twist& msg_1){
-  // Store ROS twist message and calculate RPM
-  steer = msg_1.angular.z;
-  speed = msg_1.linear.x;
-  rpm_left = (60*(speed-(track_width*steer)))/(2*3.14*wheel_radius); 
-  rpm_right = (60*(speed+(track_width*steer)))/(2*3.14*wheel_radius);
-  // Apply control to motors
-  analogWrite(ena, rpm_left*rpm_to_analog);
-  analogWrite(enb, rpm_right*rpm_to_analog);
-  digitalWrite(input_1, LOW);
-  digitalWrite(input_2, HIGH);
-  digitalWrite(input_3, HIGH);
-  digitalWrite(input_4, LOW);
+  rpm_l = (60*(vel_lin-(track_width*vel_ang)))/(2*pi*wheel_radius); 
+  rpm_r = (60*(vel_lin+(track_width*vel_ang)))/(2*pi*wheel_radius);
+  
+  analogWrite(ena_l, rpm_l*rpm_to_analog);
+  analogWrite(enb_r, rpm_r*rpm_to_analog);
+  digitalWrite(in1_l, LOW);
+  digitalWrite(in2_l, HIGH);
+  digitalWrite(in3_r, HIGH);
+  digitalWrite(in4_r, LOW);
 }
 
-//====================================
-// Receives message from python script
-//====================================
-void pythonCommsMsg(const std_msgs::Float32MultiArray& msg_2){
-  track_width = msg_2.data[0];
-  wheel_radius = msg_2.data[1];
-  max_rpm = msg_2.data[2];
-  rpm_to_analog = msg_2.data[3];
+///////////////////////
+// Store message data
+///////////////////////
+void pythonCommsMsg(const std_msgs::Float32MultiArray& msg_config){
+  test_length = msg_config.data[0];
+  test_time = msg_config.data[1];
+  track_width = msg_config.data[2];
+  wheel_radius = msg_config.data[3];
+
+  // Max RPM's based on callibration run
+  float circumference = 2*pi*wheel_radius;
+  float rotations = test_length/circumference;
+  float max_rpm = (60*(rotations/test_time));
+  rpm_to_analog = 255/max_rpm;
 }
 
-//=======================================
-// Instantiate ROS subscribers/publishers
-//=======================================
-ros::Subscriber<geometry_msgs::Twist> sub_1("/cmd_vel", cmdVelMsg );
-ros::Subscriber<std_msgs::Float32MultiArray> sub_2("comms/python", pythonCommsMsg );
-ros::Publisher pub_1("/comms/arduino", &msg_3);
+/////////////////////////////////////
+// Define subscribers and publishers
+/////////////////////////////////////
+ros::Subscriber<geometry_msgs::Twist> sub_twist("/cmd_vel", cmdVelMsg);
+ros::Subscriber<std_msgs::Float32MultiArray> sub_serial("comms/python", pythonCommsMsg);
 
-//==========================================
-// Initial setup before looped main function
-//==========================================
 void setup()
 {
   Serial.begin(57600);
-  pinMode(input_1, OUTPUT);
-  pinMode(input_2, OUTPUT);
-  pinMode(input_3,   OUTPUT);
-  pinMode(input_4, OUTPUT);
-  pinMode(ena, OUTPUT); 
-  pinMode(enb, OUTPUT);
-  nh.initNode(); // Establish node to communicate via ROS
-  nh.subscribe(sub_1);
-  nh.subscribe(sub_2);
-  nh.advertise(pub_1);
+  pinMode(in1_l, OUTPUT);
+  pinMode(in2_l, OUTPUT);
+  pinMode(in3_r,   OUTPUT);
+  pinMode(in4_r, OUTPUT);
+  pinMode(ena_l, OUTPUT); 
+  pinMode(enb_r, OUTPUT);
+
+  nh.initNode(); // Initialize node
+  Serial.println("Arduino Communication node initialized");
+  nh.subscribe(sub_twist);
+  nh.subscribe(sub_serial);
 }
 
-//=====================
-// Looped main function
-//=====================
+/////////////////
+// Main function
+/////////////////
 void loop()
 {
-  float data_array[2] = {rpm_left, rpm_right};
-  msg_3.data_length = 2;
-  msg_3.data = data_array;
-  pub_1.publish(&msg_3);
   nh.spinOnce();
 }
