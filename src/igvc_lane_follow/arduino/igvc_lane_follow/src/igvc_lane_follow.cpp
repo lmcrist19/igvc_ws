@@ -66,7 +66,7 @@ void pythonCommsMsg(const std_msgs::Float32MultiArray& msg_2){
 //=======================================
 // Instantiate ROS subscribers/publishers
 //=======================================
-ros::Subscriber<geometry_msgs::Twist> sub_1("/cmd_vel", cmd_velMsg );
+ros::Subscriber<geometry_msgs::Twist> sub_1("/cmd_vel", cmdVelMsg );
 ros::Subscriber<std_msgs::Float32MultiArray> sub_2("comms/python", pythonCommsMsg );
 ros::Publisher pub_1("/comms/arduino", &msg_3);
 

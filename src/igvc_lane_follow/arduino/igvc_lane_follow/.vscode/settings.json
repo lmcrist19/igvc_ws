@@ -1,0 +1,5 @@
+{
+    "cmake.sourceDirectory": "/home/lo/igvc_ws/src/igvc_lane_follow",
+    "cmake.configureOnOpen": false,
+    "C_Cpp.default.compilerPath": "/home/lo/.platformio/packages/toolchain-atmelavr/bin/avr-gcc"
+}
