@@ -1,0 +1,1 @@
+/home/lo/igvc_ws/devel/.private/gazelle_sim_line_course/lib/pkgconfig/gazelle_sim_line_course.pc

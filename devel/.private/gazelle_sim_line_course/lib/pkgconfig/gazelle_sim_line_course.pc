@@ -1,0 +1,8 @@
+prefix=/home/lo/igvc_ws/devel/.private/gazelle_sim_line_course
+
+Name: gazelle_sim_line_course
+Description: Description of gazelle_sim_line_course
+Version: 0.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
