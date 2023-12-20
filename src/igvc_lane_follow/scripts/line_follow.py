@@ -60,7 +60,7 @@ class LineFollowNode():
                                           #self.camera_callback, queue_size=1)
 
         # Define the image subscriber (Sim), comment out if using Gazelle Sim
-        self.image_view = rospy.Subscriber('camera/image_raw', Image,
+        self.image_view = rospy.Subscriber('usb_cam/image_raw', Image,
                                           self.camera_callback, queue_size=1)
         # Define cmd publisher
         self.pub_twist = rospy.Publisher('cmd_vel',
