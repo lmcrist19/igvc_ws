@@ -5,12 +5,20 @@
   <param name="gain" type="double" value="1.7" />
   <param name="speed" type="double" value="0.5" />
   <param name="frame_skip" type="int" value="4" />
-  <param name="hue_low" type="int" value="56" />
-  <param name="hue_high" type="int" value="179" />
-  <param name="sat_low" type="int" value="109" />
-  <param name="sat_high" type="int" value="169" />
-  <param name="val_low" type="int" value="105" />
-  <param name="val_high" type="int" value="177" />
+  <param name="hue_low" type="int" value="0" />
+  <param name="hue_high" type="int" value="0" />
+  <param name="sat_low" type="int" value="0" />
+  <param name="sat_high" type="int" value="0" />
+  <param name="val_low" type="int" value="144" />
+  <param name="val_high" type="int" value="255" />
+  <param name="cont_area" type="int" value="1000" />
+  <param name="mask_top" type="double" value="3.4" />
+  <param name="mask_right" type="double" value="2.28" />
+  <param name="targ_line" type="double" value="5.13" />
+  <param name="test_length" type="double" value="2.245" />
+  <param name="test_time" type="double" value="17.424" />
+  <param name="track_width" type="double" value="0.35" />
+  <param name="wheel_radius" type="double" value="0.035595" />
 </node>
 \endverbatim
 

@@ -249,6 +249,14 @@ class DEFAULT
         if("sat_high"==(*_i)->name){sat_high = boost::any_cast<int>(val);}
         if("val_low"==(*_i)->name){val_low = boost::any_cast<int>(val);}
         if("val_high"==(*_i)->name){val_high = boost::any_cast<int>(val);}
+        if("cont_area"==(*_i)->name){cont_area = boost::any_cast<int>(val);}
+        if("mask_top"==(*_i)->name){mask_top = boost::any_cast<double>(val);}
+        if("mask_right"==(*_i)->name){mask_right = boost::any_cast<double>(val);}
+        if("targ_line"==(*_i)->name){targ_line = boost::any_cast<double>(val);}
+        if("test_length"==(*_i)->name){test_length = boost::any_cast<double>(val);}
+        if("test_time"==(*_i)->name){test_time = boost::any_cast<double>(val);}
+        if("track_width"==(*_i)->name){track_width = boost::any_cast<double>(val);}
+        if("wheel_radius"==(*_i)->name){wheel_radius = boost::any_cast<double>(val);}
       }
     }
 
@@ -262,6 +270,14 @@ int sat_low;
 int sat_high;
 int val_low;
 int val_high;
+int cont_area;
+double mask_top;
+double mask_right;
+double targ_line;
+double test_length;
+double test_time;
+double track_width;
+double wheel_radius;
 
     bool state;
     std::string name;
@@ -291,6 +307,22 @@ int val_high;
       int val_low;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       int val_high;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      int cont_area;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      double mask_top;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      double mask_right;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      double targ_line;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      double test_length;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      double test_time;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      double track_width;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      double wheel_radius;
 //#line 231 "/opt/ros/noetic/share/dynamic_reconfigure/cmake/../templates/ConfigType.h.template"
 
     bool __fromMessage__(dynamic_reconfigure::Config &msg)
@@ -472,9 +504,9 @@ LineFollowDynCfgConfig::GroupDescription<LineFollowDynCfgConfig::DEFAULT, LineFo
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.hue_low = 0;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.hue_low = 179;
+      __max__.hue_low = 255;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.hue_low = 56;
+      __default__.hue_low = 0;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(LineFollowDynCfgConfig::AbstractParamDescriptionConstPtr(new LineFollowDynCfgConfig::ParamDescription<int>("hue_low", "int", 0, "Hue Low", "", &LineFollowDynCfgConfig::hue_low)));
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -482,9 +514,9 @@ LineFollowDynCfgConfig::GroupDescription<LineFollowDynCfgConfig::DEFAULT, LineFo
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.hue_high = 0;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.hue_high = 179;
+      __max__.hue_high = 255;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.hue_high = 179;
+      __default__.hue_high = 0;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(LineFollowDynCfgConfig::AbstractParamDescriptionConstPtr(new LineFollowDynCfgConfig::ParamDescription<int>("hue_high", "int", 0, "Hue High", "", &LineFollowDynCfgConfig::hue_high)));
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -494,7 +526,7 @@ LineFollowDynCfgConfig::GroupDescription<LineFollowDynCfgConfig::DEFAULT, LineFo
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.sat_low = 255;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.sat_low = 109;
+      __default__.sat_low = 0;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(LineFollowDynCfgConfig::AbstractParamDescriptionConstPtr(new LineFollowDynCfgConfig::ParamDescription<int>("sat_low", "int", 0, "Sat Low", "", &LineFollowDynCfgConfig::sat_low)));
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -504,7 +536,7 @@ LineFollowDynCfgConfig::GroupDescription<LineFollowDynCfgConfig::DEFAULT, LineFo
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.sat_high = 255;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.sat_high = 169;
+      __default__.sat_high = 0;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(LineFollowDynCfgConfig::AbstractParamDescriptionConstPtr(new LineFollowDynCfgConfig::ParamDescription<int>("sat_high", "int", 0, "Sat High", "", &LineFollowDynCfgConfig::sat_high)));
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -514,7 +546,7 @@ LineFollowDynCfgConfig::GroupDescription<LineFollowDynCfgConfig::DEFAULT, LineFo
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.val_low = 255;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.val_low = 105;
+      __default__.val_low = 144;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(LineFollowDynCfgConfig::AbstractParamDescriptionConstPtr(new LineFollowDynCfgConfig::ParamDescription<int>("val_low", "int", 0, "Value Low", "", &LineFollowDynCfgConfig::val_low)));
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -524,11 +556,91 @@ LineFollowDynCfgConfig::GroupDescription<LineFollowDynCfgConfig::DEFAULT, LineFo
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.val_high = 255;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.val_high = 177;
+      __default__.val_high = 255;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(LineFollowDynCfgConfig::AbstractParamDescriptionConstPtr(new LineFollowDynCfgConfig::ParamDescription<int>("val_high", "int", 0, "Value High", "", &LineFollowDynCfgConfig::val_high)));
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(LineFollowDynCfgConfig::AbstractParamDescriptionConstPtr(new LineFollowDynCfgConfig::ParamDescription<int>("val_high", "int", 0, "Value High", "", &LineFollowDynCfgConfig::val_high)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __min__.cont_area = 1000;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __max__.cont_area = 5000;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __default__.cont_area = 1000;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      Default.abstract_parameters.push_back(LineFollowDynCfgConfig::AbstractParamDescriptionConstPtr(new LineFollowDynCfgConfig::ParamDescription<int>("cont_area", "int", 0, "Contour Area", "", &LineFollowDynCfgConfig::cont_area)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __param_descriptions__.push_back(LineFollowDynCfgConfig::AbstractParamDescriptionConstPtr(new LineFollowDynCfgConfig::ParamDescription<int>("cont_area", "int", 0, "Contour Area", "", &LineFollowDynCfgConfig::cont_area)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __min__.mask_top = 1.0;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __max__.mask_top = 10.0;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __default__.mask_top = 3.4;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      Default.abstract_parameters.push_back(LineFollowDynCfgConfig::AbstractParamDescriptionConstPtr(new LineFollowDynCfgConfig::ParamDescription<double>("mask_top", "double", 0, "Mask Top", "", &LineFollowDynCfgConfig::mask_top)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __param_descriptions__.push_back(LineFollowDynCfgConfig::AbstractParamDescriptionConstPtr(new LineFollowDynCfgConfig::ParamDescription<double>("mask_top", "double", 0, "Mask Top", "", &LineFollowDynCfgConfig::mask_top)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __min__.mask_right = 1.0;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __max__.mask_right = 10.0;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __default__.mask_right = 2.28;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      Default.abstract_parameters.push_back(LineFollowDynCfgConfig::AbstractParamDescriptionConstPtr(new LineFollowDynCfgConfig::ParamDescription<double>("mask_right", "double", 0, "Mask Right", "", &LineFollowDynCfgConfig::mask_right)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __param_descriptions__.push_back(LineFollowDynCfgConfig::AbstractParamDescriptionConstPtr(new LineFollowDynCfgConfig::ParamDescription<double>("mask_right", "double", 0, "Mask Right", "", &LineFollowDynCfgConfig::mask_right)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __min__.targ_line = 1.0;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __max__.targ_line = 10.0;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __default__.targ_line = 5.13;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      Default.abstract_parameters.push_back(LineFollowDynCfgConfig::AbstractParamDescriptionConstPtr(new LineFollowDynCfgConfig::ParamDescription<double>("targ_line", "double", 0, "Target Line", "", &LineFollowDynCfgConfig::targ_line)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __param_descriptions__.push_back(LineFollowDynCfgConfig::AbstractParamDescriptionConstPtr(new LineFollowDynCfgConfig::ParamDescription<double>("targ_line", "double", 0, "Target Line", "", &LineFollowDynCfgConfig::targ_line)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __min__.test_length = 0.0;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __max__.test_length = 10.0;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __default__.test_length = 2.245;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      Default.abstract_parameters.push_back(LineFollowDynCfgConfig::AbstractParamDescriptionConstPtr(new LineFollowDynCfgConfig::ParamDescription<double>("test_length", "double", 0, "Test Length", "", &LineFollowDynCfgConfig::test_length)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __param_descriptions__.push_back(LineFollowDynCfgConfig::AbstractParamDescriptionConstPtr(new LineFollowDynCfgConfig::ParamDescription<double>("test_length", "double", 0, "Test Length", "", &LineFollowDynCfgConfig::test_length)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __min__.test_time = 0.0;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __max__.test_time = 20.0;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __default__.test_time = 17.424;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      Default.abstract_parameters.push_back(LineFollowDynCfgConfig::AbstractParamDescriptionConstPtr(new LineFollowDynCfgConfig::ParamDescription<double>("test_time", "double", 0, "Test Time", "", &LineFollowDynCfgConfig::test_time)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __param_descriptions__.push_back(LineFollowDynCfgConfig::AbstractParamDescriptionConstPtr(new LineFollowDynCfgConfig::ParamDescription<double>("test_time", "double", 0, "Test Time", "", &LineFollowDynCfgConfig::test_time)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __min__.track_width = 0.0;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __max__.track_width = 20.0;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __default__.track_width = 0.35;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      Default.abstract_parameters.push_back(LineFollowDynCfgConfig::AbstractParamDescriptionConstPtr(new LineFollowDynCfgConfig::ParamDescription<double>("track_width", "double", 0, "Track Width", "", &LineFollowDynCfgConfig::track_width)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __param_descriptions__.push_back(LineFollowDynCfgConfig::AbstractParamDescriptionConstPtr(new LineFollowDynCfgConfig::ParamDescription<double>("track_width", "double", 0, "Track Width", "", &LineFollowDynCfgConfig::track_width)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __min__.wheel_radius = 0.0;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __max__.wheel_radius = 20.0;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __default__.wheel_radius = 0.035595;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      Default.abstract_parameters.push_back(LineFollowDynCfgConfig::AbstractParamDescriptionConstPtr(new LineFollowDynCfgConfig::ParamDescription<double>("wheel_radius", "double", 0, "Wheel Radius", "", &LineFollowDynCfgConfig::wheel_radius)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __param_descriptions__.push_back(LineFollowDynCfgConfig::AbstractParamDescriptionConstPtr(new LineFollowDynCfgConfig::ParamDescription<double>("wheel_radius", "double", 0, "Wheel Radius", "", &LineFollowDynCfgConfig::wheel_radius)));
 //#line 246 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.convertParams();
 //#line 246 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
