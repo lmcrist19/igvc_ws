@@ -56,7 +56,7 @@ class LineFollowNode():
         self.steer = 0.0
 
         # Define the image subscriber
-        self.image_view = rospy.Subscriber('usb_cam/image_raw', Image,
+        self.sub_cam = rospy.Subscriber('usb_cam/image_raw', Image,
                                           self.camera_callback, queue_size=1)
         # Define python publisher
         self.pub_serial = rospy.Publisher('comms/python', 

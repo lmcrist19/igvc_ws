@@ -1,0 +1,10 @@
+Symlinking /home/lo/igvc_ws/devel/share/igvc_obj_detect/docs/ObjDetectDynCfgConfig.wikidoc
+Symlinking /home/lo/igvc_ws/devel/share/igvc_obj_detect/docs/ObjDetectDynCfgConfig-usage.dox
+Symlinking /home/lo/igvc_ws/devel/share/igvc_obj_detect/docs/ObjDetectDynCfgConfig.dox
+Symlinking /home/lo/igvc_ws/devel/share/igvc_obj_detect/cmake/igvc_obj_detectConfig.cmake
+Symlinking /home/lo/igvc_ws/devel/share/igvc_obj_detect/cmake/igvc_obj_detectConfig-version.cmake
+Symlinking /home/lo/igvc_ws/devel/include/igvc_obj_detect/ObjDetectDynCfgConfig.h
+Symlinking /home/lo/igvc_ws/devel/lib/python3/dist-packages/igvc_obj_detect/__init__.py
+Symlinking /home/lo/igvc_ws/devel/lib/python3/dist-packages/igvc_obj_detect/cfg/ObjDetectDynCfgConfig.py
+Symlinking /home/lo/igvc_ws/devel/lib/python3/dist-packages/igvc_obj_detect/cfg/__init__.py
+Symlinking /home/lo/igvc_ws/devel/lib/pkgconfig/igvc_obj_detect.pc

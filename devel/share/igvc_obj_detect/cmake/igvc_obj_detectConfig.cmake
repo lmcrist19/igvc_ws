@@ -1,0 +1,1 @@
+/home/lo/igvc_ws/devel/.private/igvc_obj_detect/share/igvc_obj_detect/cmake/igvc_obj_detectConfig.cmake

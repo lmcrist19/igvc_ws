@@ -1,0 +1,21 @@
+[  6%] Built target std_msgs_generate_messages_cpp
+[  6%] Built target urg_node_gencfg
+[  6%] Built target std_msgs_generate_messages_py
+[ 18%] Built target urg_c_wrapper
+[ 18%] Built target std_msgs_generate_messages_eus
+[ 18%] Built target std_msgs_generate_messages_lisp
+[ 18%] Built target std_msgs_generate_messages_nodejs
+[ 31%] Built target getID
+[ 31%] Built target _urg_node_generate_messages_check_deps_Status
+[ 43%] Built target urg_node_generate_messages_cpp
+[ 43%] Built target urg_node_generate_messages_lisp
+[ 56%] Built target urg_node_generate_messages_py
+[ 62%] Built target urg_node_generate_messages_nodejs
+[ 75%] Built target urg_node_generate_messages_eus
+[ 75%] Built target urg_node_gencpp
+[ 75%] Built target urg_node_generate_messages
+[ 87%] Built target urg_node_driver
+[35m[1mScanning dependencies of target urg_node[0m
+make[2]: *** No rule to make target '/home/lo/igvc_ws/src/urg_node-melodic-devel/src/urg_node.cpp', needed by 'CMakeFiles/urg_node.dir/src/urg_node.cpp.o'.  Stop.
+make[1]: *** [CMakeFiles/Makefile2:492: CMakeFiles/urg_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2
