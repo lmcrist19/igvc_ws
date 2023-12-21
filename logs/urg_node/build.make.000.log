@@ -2,31 +2,31 @@
 [35m[1mScanning dependencies of target urg_node_gencfg[0m
 [35m[1mScanning dependencies of target _urg_node_generate_messages_check_deps_Status[0m
 [35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
-[35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
-[35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
 [35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
+[  6%] [32mBuilding CXX object CMakeFiles/urg_c_wrapper.dir/src/urg_c_wrapper.cpp.o[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
 [35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
-[  6%] [34m[1mGenerating dynamic reconfigure files from cfg/URG.cfg: /home/lo/igvc_ws/devel/.private/urg_node/include/urg_node/URGConfig.h /home/lo/igvc_ws/devel/.private/urg_node/lib/python3/dist-packages/urg_node/cfg/URGConfig.py[0m
-[  6%] Built target std_msgs_generate_messages_py
-[  6%] Built target std_msgs_generate_messages_nodejs
-[  6%] Built target std_msgs_generate_messages_cpp
-[  6%] Built target std_msgs_generate_messages_eus
-[ 12%] [32mBuilding CXX object CMakeFiles/urg_c_wrapper.dir/src/urg_c_wrapper.cpp.o[0m
+[ 12%] [34m[1mGenerating dynamic reconfigure files from cfg/URG.cfg: /home/lo/igvc_ws/devel/.private/urg_node/include/urg_node/URGConfig.h /home/lo/igvc_ws/devel/.private/urg_node/lib/python3/dist-packages/urg_node/cfg/URGConfig.py[0m
+[ 12%] Built target std_msgs_generate_messages_py
+[ 12%] Built target std_msgs_generate_messages_cpp
+[ 12%] Built target std_msgs_generate_messages_nodejs
 [ 12%] Built target std_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
+[ 12%] Built target std_msgs_generate_messages_eus
 [ 12%] Built target _urg_node_generate_messages_check_deps_Status
 [35m[1mScanning dependencies of target urg_node_generate_messages_cpp[0m
+[ 18%] [34m[1mGenerating C++ code from urg_node/Status.msg[0m
 [35m[1mScanning dependencies of target urg_node_generate_messages_py[0m
 [35m[1mScanning dependencies of target urg_node_generate_messages_nodejs[0m
 [35m[1mScanning dependencies of target urg_node_generate_messages_lisp[0m
 [35m[1mScanning dependencies of target urg_node_generate_messages_eus[0m
-[ 25%] [34m[1mGenerating Python from MSG urg_node/Status[0m
-[ 31%] [34m[1mGenerating C++ code from urg_node/Status.msg[0m
-[ 31%] [34m[1mGenerating Javascript code from urg_node/Status.msg[0m
-[ 37%] [34m[1mGenerating Lisp code from urg_node/Status.msg[0m
+[ 25%] [34m[1mGenerating Javascript code from urg_node/Status.msg[0m
+[ 31%] [34m[1mGenerating Lisp code from urg_node/Status.msg[0m
+[ 37%] [34m[1mGenerating EusLisp code from urg_node/Status.msg[0m
+[ 43%] [34m[1mGenerating Python from MSG urg_node/Status[0m
 Generating reconfiguration files for URG in urg_node
-[ 50%] [34m[1mGenerating EusLisp manifest code for urg_node[0m
-[ 50%] [34m[1mGenerating EusLisp code from urg_node/Status.msg[0m
 Wrote header file in /home/lo/igvc_ws/devel/.private/urg_node/include/urg_node/URGConfig.h
+[ 50%] [34m[1mGenerating EusLisp manifest code for urg_node[0m
 [ 50%] Built target urg_node_gencfg
 [ 50%] Built target urg_node_generate_messages_lisp
 [ 50%] Built target urg_node_generate_messages_nodejs

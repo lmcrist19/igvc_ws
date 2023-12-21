@@ -1,1 +1,0 @@
-/home/lo/igvc_ws/devel/.private/sick_scan/share/roseus/ros/sick_scan/srv/LIDoutputstateSrv.l

@@ -8,6 +8,9 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/lo/igvc_ws/devel/.private/catkin_tools_prebuild:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH='/opt/ros/noetic/lib'
+export PKG_CONFIG_PATH='/opt/ros/noetic/lib/pkgconfig'
 export PWD='/home/lo/igvc_ws/build/catkin_tools_prebuild'
-export ROSLISP_PACKAGE_DIRECTORIES='/home/lo/igvc_ws/devel/.private/catkin_tools_prebuild/share/common-lisp'
-export ROS_PACKAGE_PATH="/home/lo/igvc_ws/build/catkin_tools_prebuild:$ROS_PACKAGE_PATH"
+export PYTHONPATH='/opt/ros/noetic/lib/python3/dist-packages'
+export ROSLISP_PACKAGE_DIRECTORIES="/home/lo/igvc_ws/devel/.private/catkin_tools_prebuild/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH='/home/lo/igvc_ws/build/catkin_tools_prebuild:/home/lo/igvc_ws/src/gazelle_sim:/home/lo/igvc_ws/src/gazelle_sim_j129_l2_course:/home/lo/igvc_ws/src/igvc_lane_follow:/home/lo/igvc_ws/src/urg_node-melodic-devel:/home/lo/igvc_ws/src/usb_cam:/opt/ros/noetic/share'

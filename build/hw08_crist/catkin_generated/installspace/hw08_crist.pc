@@ -1,8 +1,0 @@
-prefix=/home/lo/igvc_ws/install
-
-Name: hw08_crist
-Description: Description of hw08_crist
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: 

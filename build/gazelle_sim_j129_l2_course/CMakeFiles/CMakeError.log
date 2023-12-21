@@ -1,21 +1,21 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/lo/igvc_ws/build/gazelle_sim_j129_l2_course/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_88b61/fast && /usr/bin/make -f CMakeFiles/cmTC_88b61.dir/build.make CMakeFiles/cmTC_88b61.dir/build
+Run Build Command(s):/usr/bin/make cmTC_fa33a/fast && /usr/bin/make -f CMakeFiles/cmTC_fa33a.dir/build.make CMakeFiles/cmTC_fa33a.dir/build
 make[1]: Entering directory '/home/lo/igvc_ws/build/gazelle_sim_j129_l2_course/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_88b61.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_88b61.dir/src.c.o   -c /home/lo/igvc_ws/build/gazelle_sim_j129_l2_course/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_88b61
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88b61.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_88b61.dir/src.c.o  -o cmTC_88b61 
-/usr/bin/ld: CMakeFiles/cmTC_88b61.dir/src.c.o: in function `main':
+Building C object CMakeFiles/cmTC_fa33a.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_fa33a.dir/src.c.o   -c /home/lo/igvc_ws/build/gazelle_sim_j129_l2_course/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_fa33a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fa33a.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_fa33a.dir/src.c.o  -o cmTC_fa33a 
+/usr/bin/ld: CMakeFiles/cmTC_fa33a.dir/src.c.o: in function `main':
 src.c:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_88b61.dir/build.make:87: cmTC_88b61] Error 1
+make[1]: *** [CMakeFiles/cmTC_fa33a.dir/build.make:87: cmTC_fa33a] Error 1
 make[1]: Leaving directory '/home/lo/igvc_ws/build/gazelle_sim_j129_l2_course/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_88b61/fast] Error 2
+make: *** [Makefile:121: cmTC_fa33a/fast] Error 2
 
 
 Source file was:
@@ -41,18 +41,18 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/lo/igvc_ws/build/gazelle_sim_j129_l2_course/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_d6b15/fast && /usr/bin/make -f CMakeFiles/cmTC_d6b15.dir/build.make CMakeFiles/cmTC_d6b15.dir/build
+Run Build Command(s):/usr/bin/make cmTC_a687b/fast && /usr/bin/make -f CMakeFiles/cmTC_a687b.dir/build.make CMakeFiles/cmTC_a687b.dir/build
 make[1]: Entering directory '/home/lo/igvc_ws/build/gazelle_sim_j129_l2_course/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d6b15.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_d6b15.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_d6b15
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d6b15.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_d6b15.dir/CheckFunctionExists.c.o  -o cmTC_d6b15  -lpthreads 
+Building C object CMakeFiles/cmTC_a687b.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a687b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a687b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a687b.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_a687b.dir/CheckFunctionExists.c.o  -o cmTC_a687b  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_d6b15.dir/build.make:87: cmTC_d6b15] Error 1
+make[1]: *** [CMakeFiles/cmTC_a687b.dir/build.make:87: cmTC_a687b] Error 1
 make[1]: Leaving directory '/home/lo/igvc_ws/build/gazelle_sim_j129_l2_course/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_d6b15/fast] Error 2
+make: *** [Makefile:121: cmTC_a687b/fast] Error 2
 
 
 
