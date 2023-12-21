@@ -1,0 +1,1 @@
+/home/lo/igvc_ws/devel/.private/urg_node/share/gennodejs/ros/urg_node/msg/Status.js

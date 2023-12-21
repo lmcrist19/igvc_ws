@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -Wno-format-overflow  -shared -Wl,-soname,libgmock.so -o ../lib/libgmock.so CMakeFiles/gmock.dir/src/gmock-all.cc.o  -Wl,-rpath,/home/lo/igvc_ws/build/sick_scan/gtest/lib ../lib/libgtest.so -lpthread 
