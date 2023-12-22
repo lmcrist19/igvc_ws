@@ -9,7 +9,8 @@ import numpy as np
 # Import ROS message information
 from std_msgs.msg import Float32MultiArray
 from std_msgs.msg import Float32
-from sensor_msgs.msg import LaserScan
+from nav_msgs.msg import Odometry
+
 
 # Import dynamic reconfigure 
 from dynamic_reconfigure.server import Server
@@ -50,8 +51,8 @@ class WaypointNavNode():
         self.dimension_arr = Float32MultiArray()
 
         # Define the image subscriber
-        self.sub_lidar = rospy.Subscriber('/scan', LaserScan,
-                                          self.lidar_callback)
+        self.sub_odom = rospy.Subscriber('odom', Odometry,
+        				                  self.odom_callback)
                                           
         # Set up dynamic reconfigure
         self.srv = Server(WaypointNavDynCfgConfig,
@@ -98,8 +99,8 @@ class WaypointNavNode():
         
         return config
     
-    def lidar_callback(self, scan_msg):
-        rospy.loginfo(scan_msg)
+    def odom_callback(self, odom_msg):
+        rospy.loginfo(odom_msg)
         return
     
 #################    
