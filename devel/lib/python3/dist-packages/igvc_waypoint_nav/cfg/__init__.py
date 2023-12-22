@@ -1,0 +1,1 @@
+/home/lo/igvc_ws/devel/.private/igvc_waypoint_nav/lib/python3/dist-packages/igvc_waypoint_nav/cfg/__init__.py

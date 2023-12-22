@@ -1,0 +1,5 @@
+[35m[1mScanning dependencies of target igvc_waypoint_nav_gencfg[0m
+[100%] [34m[1mGenerating dynamic reconfigure files from cfg/WaypointNavDynCfg.cfg: /home/lo/igvc_ws/devel/.private/igvc_waypoint_nav/include/igvc_waypoint_nav/WaypointNavDynCfgConfig.h /home/lo/igvc_ws/devel/.private/igvc_waypoint_nav/lib/python3/dist-packages/igvc_waypoint_nav/cfg/WaypointNavDynCfgConfig.py[0m
+Generating reconfiguration files for WaypointNavDynCfg in igvc_waypoint_nav
+Wrote header file in /home/lo/igvc_ws/devel/.private/igvc_waypoint_nav/include/igvc_waypoint_nav/WaypointNavDynCfgConfig.h
+[100%] Built target igvc_waypoint_nav_gencfg

@@ -1,0 +1,5 @@
+[35m[1mScanning dependencies of target igvc_lane_follow_gencfg[0m
+[100%] [34m[1mGenerating dynamic reconfigure files from cfg/LaneFollowDynCfg.cfg: /home/lo/igvc_ws/devel/.private/igvc_lane_follow/include/igvc_lane_follow/LaneFollowDynCfgConfig.h /home/lo/igvc_ws/devel/.private/igvc_lane_follow/lib/python3/dist-packages/igvc_lane_follow/cfg/LaneFollowDynCfgConfig.py[0m
+Generating reconfiguration files for LaneFollowDynCfg in igvc_lane_follow
+Wrote header file in /home/lo/igvc_ws/devel/.private/igvc_lane_follow/include/igvc_lane_follow/LaneFollowDynCfgConfig.h
+[100%] Built target igvc_lane_follow_gencfg

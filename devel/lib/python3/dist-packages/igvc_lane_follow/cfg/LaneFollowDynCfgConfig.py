@@ -1,0 +1,1 @@
+/home/lo/igvc_ws/devel/.private/igvc_lane_follow/lib/python3/dist-packages/igvc_lane_follow/cfg/LaneFollowDynCfgConfig.py

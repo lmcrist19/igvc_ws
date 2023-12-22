@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(lane_follow_igvc)
+project(igvc_lane_follow)
 
 # Find catkin macros and libraries
 find_package(catkin REQUIRED COMPONENTS
@@ -11,7 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
 
 # Declare ROS dynamic reconfigure parameters
 generate_dynamic_reconfigure_options(
-  cfg/LineFollowDynCfg.cfg
+  cfg/LaneFollowDynCfg.cfg
 )
 
 # Define the catkin_package

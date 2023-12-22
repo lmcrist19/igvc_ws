@@ -1,0 +1,1 @@
+/home/lo/igvc_ws/devel/.private/igvc_lane_follow/lib/pkgconfig/igvc_lane_follow.pc
