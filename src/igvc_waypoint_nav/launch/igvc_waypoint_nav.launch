@@ -1,10 +1,7 @@
 <launch>
 
-  <!-- GNSS -->
-  
-
-  <!-- Launch object node -->
+  <!-- Launch waypoint node -->
   <node pkg="igvc_waypoint_nav" type="waypoint_nav.py" name="waypoint_nav_node" output="screen" />
-
+    <param name="serial_port" value="/dev/ttyUSB0"/>
 
 </launch>
