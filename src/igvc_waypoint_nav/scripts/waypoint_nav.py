@@ -8,8 +8,7 @@ import numpy as np
 
 # Import ROS message information
 from std_msgs.msg import Float32MultiArray
-from std_msgs.msg import Float32
-from nav_msgs.msg import Odometry
+from sensor_msgs.msg import NavSatFix
 
 
 # Import dynamic reconfigure 
@@ -51,8 +50,8 @@ class WaypointNavNode():
         self.dimension_arr = Float32MultiArray()
 
         # Define the image subscriber
-        self.sub_odom = rospy.Subscriber('odom', Odometry,
-        				                  self.odom_callback)
+        self.sub_nav = rospy.Subscriber('/fix', NavSatFix,
+        				                  self.nav_callback, queue_size=1)
                                           
         # Set up dynamic reconfigure
         self.srv = Server(WaypointNavDynCfgConfig,
@@ -99,8 +98,8 @@ class WaypointNavNode():
         
         return config
     
-    def odom_callback(self, odom_msg):
-        rospy.loginfo(odom_msg)
+    def nav_callback(self, nav_msg):
+        rospy.loginfo(nav_msg)
         return
     
 #################    
