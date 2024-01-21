@@ -8,7 +8,7 @@ import numpy as np
 
 # Import ROS message information
 from std_msgs.msg import Float32MultiArray
-from sensor_msgs.msg import NavSatFix
+from nmea_msgs.msg import Gppga
 
 
 # Import dynamic reconfigure 
@@ -50,7 +50,7 @@ class WaypointNavNode():
         self.dimension_arr = Float32MultiArray()
 
         # Define the image subscriber
-        self.sub_nav = rospy.Subscriber('/fix', NavSatFix,
+        self.sub_nav = rospy.Subscriber('/fix', Gppga,
         				                  self.nav_callback, queue_size=1)
                                           
         # Set up dynamic reconfigure
@@ -99,7 +99,7 @@ class WaypointNavNode():
         return config
     
     def nav_callback(self, nav_msg):
-        rospy.loginfo(nav_msg)
+        rospy.loginfo(nav_msg.latitude)
         return
     
 #################    

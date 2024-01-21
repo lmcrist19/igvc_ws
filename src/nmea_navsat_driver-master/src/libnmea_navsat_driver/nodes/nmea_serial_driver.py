@@ -36,6 +36,7 @@ import serial
 import sys
 
 import rospy
+import codecs
 
 from libnmea_navsat_driver.driver import RosNMEADriver
 
@@ -65,8 +66,7 @@ def main():
             while not rospy.is_shutdown():
                 data = GPS.readline().strip()
                 try:
-                    # nmea_str = data.decode('ascii')
-                    nmea_str = data.hex()
+                    nmea_str = data.decode('ascii')
                     driver.add_sentence(nmea_str, frame_id)
                 except UnicodeError as e:
                     rospy.logwarn("Skipped reading a line from the serial device because it could not be "

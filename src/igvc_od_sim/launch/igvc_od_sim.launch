@@ -1,0 +1,22 @@
+<launch>
+  <!-- Load map -->
+  <param name="map_dir" value="$(find gazelle_sim_barrel_course)/map" />
+  <rosparam command="load"
+            file="$(find gazelle_sim_barrel_course)/map/barrel_course.yaml" />
+
+  <!-- Load robot -->
+  <rosparam command="load"
+            file="$(find gazelle_sim)/robot/basic_differential_circ.yaml" />
+
+  <!-- Gazelle Sim -->
+  <include file="$(find gazelle_sim)/launch/gazelle_sim.launch">
+    <arg name="show_rviz" value="false" />
+    <arg name="show_steering" default="false" />
+    <arg name="show_image_view" default="false" />
+    <arg name="show_dynamic_reconfigure" default="true" />
+  </include>
+   
+  <!-- Launch joystick reporter node -->
+  <node pkg="igvc_od_sim" type="obj_detect.py" name="obj_detect_node" output="screen" />
+
+</launch>
