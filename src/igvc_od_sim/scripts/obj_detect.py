@@ -60,7 +60,7 @@ class ObjDetectNode():
     #####################
     # LiDAR Callback
     #####################
-    def lidar_callabck(self, scan_msg):
+    def lidar_callback(self, scan_msg):
         max_angle = 360
         min_angle = 0
         
