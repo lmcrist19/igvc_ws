@@ -240,44 +240,16 @@ class DEFAULT
         (*_i)->getValue(config, val);
 
         if("enable"==(*_i)->name){enable = boost::any_cast<bool>(val);}
-        if("gain"==(*_i)->name){gain = boost::any_cast<double>(val);}
         if("speed"==(*_i)->name){speed = boost::any_cast<double>(val);}
-        if("frame_skip"==(*_i)->name){frame_skip = boost::any_cast<int>(val);}
-        if("hue_low"==(*_i)->name){hue_low = boost::any_cast<int>(val);}
-        if("hue_high"==(*_i)->name){hue_high = boost::any_cast<int>(val);}
-        if("sat_low"==(*_i)->name){sat_low = boost::any_cast<int>(val);}
-        if("sat_high"==(*_i)->name){sat_high = boost::any_cast<int>(val);}
-        if("val_low"==(*_i)->name){val_low = boost::any_cast<int>(val);}
-        if("val_high"==(*_i)->name){val_high = boost::any_cast<int>(val);}
-        if("cont_area"==(*_i)->name){cont_area = boost::any_cast<int>(val);}
-        if("mask_top"==(*_i)->name){mask_top = boost::any_cast<double>(val);}
-        if("mask_right"==(*_i)->name){mask_right = boost::any_cast<double>(val);}
-        if("targ_line"==(*_i)->name){targ_line = boost::any_cast<double>(val);}
-        if("test_length"==(*_i)->name){test_length = boost::any_cast<double>(val);}
-        if("test_time"==(*_i)->name){test_time = boost::any_cast<double>(val);}
-        if("track_width"==(*_i)->name){track_width = boost::any_cast<double>(val);}
-        if("wheel_radius"==(*_i)->name){wheel_radius = boost::any_cast<double>(val);}
+        if("window"==(*_i)->name){window = boost::any_cast<int>(val);}
+        if("gain"==(*_i)->name){gain = boost::any_cast<double>(val);}
       }
     }
 
     bool enable;
-double gain;
 double speed;
-int frame_skip;
-int hue_low;
-int hue_high;
-int sat_low;
-int sat_high;
-int val_low;
-int val_high;
-int cont_area;
-double mask_top;
-double mask_right;
-double targ_line;
-double test_length;
-double test_time;
-double track_width;
-double wheel_radius;
+int window;
+double gain;
 
     bool state;
     std::string name;
@@ -290,39 +262,11 @@ double wheel_radius;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       bool enable;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      double gain;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       double speed;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      int frame_skip;
+      int window;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      int hue_low;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      int hue_high;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      int sat_low;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      int sat_high;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      int val_low;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      int val_high;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      int cont_area;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      double mask_top;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      double mask_right;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      double targ_line;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      double test_length;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      double test_time;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      double track_width;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      double wheel_radius;
+      double gain;
 //#line 231 "/opt/ros/noetic/share/dynamic_reconfigure/cmake/../templates/ConfigType.h.template"
 
     bool __fromMessage__(dynamic_reconfigure::Config &msg)
@@ -472,16 +416,6 @@ ObjDetectDynCfgConfig::GroupDescription<ObjDetectDynCfgConfig::DEFAULT, ObjDetec
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<bool>("enable", "bool", 0, "Enable", "", &ObjDetectDynCfgConfig::enable)));
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.gain = 0.0;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.gain = 10.0;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.gain = 1.7;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<double>("gain", "double", 0, "Gain", "", &ObjDetectDynCfgConfig::gain)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<double>("gain", "double", 0, "Gain", "", &ObjDetectDynCfgConfig::gain)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.speed = 0.0;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.speed = 5.0;
@@ -492,155 +426,25 @@ ObjDetectDynCfgConfig::GroupDescription<ObjDetectDynCfgConfig::DEFAULT, ObjDetec
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<double>("speed", "double", 0, "Speed", "", &ObjDetectDynCfgConfig::speed)));
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.frame_skip = 1;
+      __min__.window = 0;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.frame_skip = 10;
+      __max__.window = 5;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.frame_skip = 4;
+      __default__.window = 0;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<int>("frame_skip", "int", 0, "Frame Skip", "", &ObjDetectDynCfgConfig::frame_skip)));
+      Default.abstract_parameters.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<int>("window", "int", 0, "Window", "", &ObjDetectDynCfgConfig::window)));
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<int>("frame_skip", "int", 0, "Frame Skip", "", &ObjDetectDynCfgConfig::frame_skip)));
+      __param_descriptions__.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<int>("window", "int", 0, "Window", "", &ObjDetectDynCfgConfig::window)));
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.hue_low = 0;
+      __min__.gain = 0.0;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.hue_low = 255;
+      __max__.gain = 10.0;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.hue_low = 0;
+      __default__.gain = 1.0;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<int>("hue_low", "int", 0, "Hue Low", "", &ObjDetectDynCfgConfig::hue_low)));
+      Default.abstract_parameters.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<double>("gain", "double", 0, "Gain", "", &ObjDetectDynCfgConfig::gain)));
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<int>("hue_low", "int", 0, "Hue Low", "", &ObjDetectDynCfgConfig::hue_low)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.hue_high = 0;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.hue_high = 255;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.hue_high = 0;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<int>("hue_high", "int", 0, "Hue High", "", &ObjDetectDynCfgConfig::hue_high)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<int>("hue_high", "int", 0, "Hue High", "", &ObjDetectDynCfgConfig::hue_high)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.sat_low = 0;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.sat_low = 255;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.sat_low = 0;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<int>("sat_low", "int", 0, "Sat Low", "", &ObjDetectDynCfgConfig::sat_low)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<int>("sat_low", "int", 0, "Sat Low", "", &ObjDetectDynCfgConfig::sat_low)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.sat_high = 0;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.sat_high = 255;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.sat_high = 0;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<int>("sat_high", "int", 0, "Sat High", "", &ObjDetectDynCfgConfig::sat_high)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<int>("sat_high", "int", 0, "Sat High", "", &ObjDetectDynCfgConfig::sat_high)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.val_low = 0;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.val_low = 255;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.val_low = 144;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<int>("val_low", "int", 0, "Value Low", "", &ObjDetectDynCfgConfig::val_low)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<int>("val_low", "int", 0, "Value Low", "", &ObjDetectDynCfgConfig::val_low)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.val_high = 0;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.val_high = 255;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.val_high = 255;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<int>("val_high", "int", 0, "Value High", "", &ObjDetectDynCfgConfig::val_high)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<int>("val_high", "int", 0, "Value High", "", &ObjDetectDynCfgConfig::val_high)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.cont_area = 1000;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.cont_area = 5000;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.cont_area = 1000;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<int>("cont_area", "int", 0, "Contour Area", "", &ObjDetectDynCfgConfig::cont_area)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<int>("cont_area", "int", 0, "Contour Area", "", &ObjDetectDynCfgConfig::cont_area)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.mask_top = 1.0;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.mask_top = 10.0;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.mask_top = 3.4;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<double>("mask_top", "double", 0, "Mask Top", "", &ObjDetectDynCfgConfig::mask_top)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<double>("mask_top", "double", 0, "Mask Top", "", &ObjDetectDynCfgConfig::mask_top)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.mask_right = 1.0;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.mask_right = 10.0;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.mask_right = 2.28;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<double>("mask_right", "double", 0, "Mask Right", "", &ObjDetectDynCfgConfig::mask_right)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<double>("mask_right", "double", 0, "Mask Right", "", &ObjDetectDynCfgConfig::mask_right)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.targ_line = 1.0;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.targ_line = 10.0;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.targ_line = 5.13;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<double>("targ_line", "double", 0, "Target Line", "", &ObjDetectDynCfgConfig::targ_line)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<double>("targ_line", "double", 0, "Target Line", "", &ObjDetectDynCfgConfig::targ_line)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.test_length = 0.0;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.test_length = 10.0;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.test_length = 2.245;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<double>("test_length", "double", 0, "Test Length", "", &ObjDetectDynCfgConfig::test_length)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<double>("test_length", "double", 0, "Test Length", "", &ObjDetectDynCfgConfig::test_length)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.test_time = 0.0;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.test_time = 20.0;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.test_time = 17.424;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<double>("test_time", "double", 0, "Test Time", "", &ObjDetectDynCfgConfig::test_time)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<double>("test_time", "double", 0, "Test Time", "", &ObjDetectDynCfgConfig::test_time)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.track_width = 0.0;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.track_width = 20.0;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.track_width = 0.35;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<double>("track_width", "double", 0, "Track Width", "", &ObjDetectDynCfgConfig::track_width)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<double>("track_width", "double", 0, "Track Width", "", &ObjDetectDynCfgConfig::track_width)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.wheel_radius = 0.0;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.wheel_radius = 20.0;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.wheel_radius = 0.035595;
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<double>("wheel_radius", "double", 0, "Wheel Radius", "", &ObjDetectDynCfgConfig::wheel_radius)));
-//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<double>("wheel_radius", "double", 0, "Wheel Radius", "", &ObjDetectDynCfgConfig::wheel_radius)));
+      __param_descriptions__.push_back(ObjDetectDynCfgConfig::AbstractParamDescriptionConstPtr(new ObjDetectDynCfgConfig::ParamDescription<double>("gain", "double", 0, "Gain", "", &ObjDetectDynCfgConfig::gain)));
 //#line 246 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.convertParams();
 //#line 246 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"

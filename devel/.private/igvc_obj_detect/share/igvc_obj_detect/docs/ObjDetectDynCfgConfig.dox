@@ -3,21 +3,7 @@
 Reads and maintains the following parameters on the ROS server
 
 - \b "~enable" : \b [bool] Enable min: False, default: False, max: True
-- \b "~gain" : \b [double] Gain min: 0.0, default: 1.7, max: 10.0
 - \b "~speed" : \b [double] Speed min: 0.0, default: 0.5, max: 5.0
-- \b "~frame_skip" : \b [int] Frame Skip min: 1, default: 4, max: 10
-- \b "~hue_low" : \b [int] Hue Low min: 0, default: 0, max: 255
-- \b "~hue_high" : \b [int] Hue High min: 0, default: 0, max: 255
-- \b "~sat_low" : \b [int] Sat Low min: 0, default: 0, max: 255
-- \b "~sat_high" : \b [int] Sat High min: 0, default: 0, max: 255
-- \b "~val_low" : \b [int] Value Low min: 0, default: 144, max: 255
-- \b "~val_high" : \b [int] Value High min: 0, default: 255, max: 255
-- \b "~cont_area" : \b [int] Contour Area min: 1000, default: 1000, max: 5000
-- \b "~mask_top" : \b [double] Mask Top min: 1.0, default: 3.4, max: 10.0
-- \b "~mask_right" : \b [double] Mask Right min: 1.0, default: 2.28, max: 10.0
-- \b "~targ_line" : \b [double] Target Line min: 1.0, default: 5.13, max: 10.0
-- \b "~test_length" : \b [double] Test Length min: 0.0, default: 2.245, max: 10.0
-- \b "~test_time" : \b [double] Test Time min: 0.0, default: 17.424, max: 20.0
-- \b "~track_width" : \b [double] Track Width min: 0.0, default: 0.35, max: 20.0
-- \b "~wheel_radius" : \b [double] Wheel Radius min: 0.0, default: 0.035595, max: 20.0
+- \b "~window" : \b [int] Window min: 0, default: 0, max: 5
+- \b "~gain" : \b [double] Gain min: 0.0, default: 1.0, max: 10.0
 

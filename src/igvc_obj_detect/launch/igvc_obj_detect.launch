@@ -18,7 +18,7 @@
   </include>
 
   <!-- Lidar -->
-  <include file="$(find urg_node)/launch/urg_lidar.launch"/>
+  <!-- <include file="$(find urg_node)/launch/urg_lidar.launch"/> -->
 
    <!-- Launch object node -->
    #  <node pkg="igvc_obj_detect" type="obj_detect.py" name="obj_detect_node" output="screen" />
