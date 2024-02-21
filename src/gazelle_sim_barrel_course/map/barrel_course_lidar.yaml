@@ -9,8 +9,8 @@ y_center_img: 600
 img_view_scale: 0.75
 
 # Circle obstructions (up to 10)
-circ0: [ 6.0, 1.5, 0.2 ]
-circ1: [ 3.0, 1.5, 0.2 ]
+circ0: [ 3.0, 1.5, 0.2 ]
+circ1: [ 3.0, 1.0, 0.2 ]
 
 # Rectangle obstructions (up to 10)
 #rect0: [ 2.75, 1.75, 3.25, 1.75, 3.25, 1.25, 2.75, 1.25 ]

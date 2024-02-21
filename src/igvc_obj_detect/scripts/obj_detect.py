@@ -77,7 +77,7 @@ class ObjDetectNode():
     # Lidar callback
     ##################    
     def lidar_callback(self, scan_msg):
-        rospy.loginfo(scan_msg)
+        rospy.loginfo(scan_msg.ranges)
         return
     
 #################    
